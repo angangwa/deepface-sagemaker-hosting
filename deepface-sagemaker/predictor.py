@@ -110,7 +110,11 @@ def ping():
     # Check if the classifier was loaded correctly
     health = model is not None
     status = 200 if health else 404
-    return Response(response="\n", status=status, mimetype="application/json")
+    return Response(
+        response=json.dumps({"status": "ok"}), 
+        status=status, 
+        mimetype="application/json"
+    )
 
 
 @app.route("/invocations", methods=["POST"])

@@ -1,0 +1,11 @@
+numpy
+pandas
+Pillow
+opencv-python
+tensorflow
+tf-keras
+keras
+flask 
+gevent 
+gunicorn 
+deepface
