@@ -2,3 +2,5 @@ sagemaker
 boto3
 jupyter
 ipykernel
+opencv-python
+deepface

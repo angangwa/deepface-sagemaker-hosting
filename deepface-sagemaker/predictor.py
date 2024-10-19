@@ -38,6 +38,7 @@ def represent(input_args):
         detector_backend=detector_backend,
         enforce_detection=enforce_detection,
         align=align,
+        anti_spoofing=False
     )
 
     logger.debug(obj)
@@ -72,6 +73,7 @@ def verify(input_args):
         distance_metric=distance_metric,
         align=align,
         enforce_detection=enforce_detection,
+        anti_spoofing=False
     )
 
     logger.debug(verification)
@@ -98,6 +100,7 @@ def analyze(input_args):
         detector_backend=detector_backend,
         enforce_detection=enforce_detection,
         align=align,
+        anti_spoofing=False
     )
 
     logger.debug(demographies)
