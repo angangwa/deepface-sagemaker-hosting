@@ -2,6 +2,7 @@
 
 Straight forward implementation of SageMaker endpoint for hosting [deepface](https://github.com/serengil/deepface) api.
 
+Based on: https://github.com/serengil/deepface/blob/master/deepface/api/src/modules/core/routes.py
 
 # Local build and test
 
