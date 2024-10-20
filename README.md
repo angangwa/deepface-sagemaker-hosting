@@ -14,9 +14,9 @@ Based on: https://github.com/serengil/deepface/blob/master/deepface/api/src/modu
 
 ```
 import base64
-import cv2
-import boto3
 import json
+import requests
+import cv2
 
 # Load image in base64
 def get_image_in_base64(image_file: str) -> str:
@@ -25,12 +25,12 @@ def get_image_in_base64(image_file: str) -> str:
     img_base65 = f"data:image/jpg;base64,{string}"
     return img_base65
 
-img1_base64: str = get_image_in_base64("steve-jobs.jpg")
-img2_base64: str = get_image_in_base64("steve-2.jpg")
+img1_base64: str = get_image_in_base64("test-images/steve-jobs.jpg")
+img2_base64: str = get_image_in_base64("test-images/steve-2.jpg")
 
 payload = {
     "service": "represent",
-    "img_path": img_base64, 
+    "img_path": img1_base64, 
 }
 
 x = requests.post("http://localhost/invocations", json = payload)
